@@ -86,7 +86,7 @@ DATABASES = {
 "default": {
     "ENGINE": "djongo",
     "CLIENT": {
-        "host": "mongodb+srv://SuperAdmin:SuperAdmin@cluster0.radl6.mongodb.net/myFirstDatabase?retryWrites=true&ssl=true&ssl_cert_reqs=CERT_NONE&w=majority",
+        "host": "mongodb+srv://SuperAdmin:SuperAdmin@cluster0.radl6.mongodb.net/fashionhome?retryWrites=true&ssl=true&ssl_cert_reqs=CERT_NONE&w=majority",
         "username": "SuperAdmin",
         "password": "SuperAdmin",
         "name": "fashionhome",
