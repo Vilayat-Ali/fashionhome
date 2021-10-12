@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'utils/header.html' %}
+      <style> 
+          .like {
+            font-size: 1.5rem;
+          }
+      </style>
+</head>
+<body>
+    {% block  navbar %}
+    {% include './navbar.html' %}
+    {% endblock %}
+
+    {% block main %}
+    <div class="container">
+        <div class="row">
+    {% for product in products%}
+        {% include 'utils/product-card.html' with p_name=product.product_name  p_price=product.product_price p_description=product.product_description p_pic=product.product_pic.url p_id=product.id%}
+    {% endfor%}
+</div>
+</div>
+    {% endblock%}
+
+    {% include 'utils/footer.html' %}
+</body>
+</html>

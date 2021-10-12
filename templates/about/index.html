@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'utils/header.html' %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
+</head>
+<body>
+    {% block  navbar %}
+    {% include './navbar.html' %}
+    {% endblock %}
+
+    {% block main %}
+
+    <div class="aboutus-section" style="background-color: #fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="aboutus" id="sec">
+                        <h2 class="aboutus-title">About Us</h2>
+                        <p class="aboutus-text">At Fashion Home, we are feulled by the dream of providing high standards of fashion at affordable prices to our lovely community. We are a dedicated team of fashion experts with years of experience, so you can trust our recommendations blindly!</p>
+                        <p class="aboutus-text">We feature hundreds of brands, with different fashion tastes to cater all your fashionable vims and desires. Our products are guarded by their actual fitting size and high-quality raw materials, meaning our products are of high-quality with easy returns.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12" id="sec">
+                    <div class="feature">
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                <i class="fas fa-cart-arrow-down icon" id="icon"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Easy Order Placement</h4>
+                                    <p>Place order with no worries with our easy-to-flow customer service</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                <i class="fas fa-user-headset icon" id="icon"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Reliable services</h4>
+                                    <p>Chat directly with us with 100% transparency</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                <i class="fas fa-handshake icon" id="icon"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Easy Replacement</h4>
+                                    <p>Don't happy with the purchase? Get happy with Easy Replacement!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock%}
+    {% include 'utils/footer.html' %}
+</body>
+</html>
+
+

@@ -1,0 +1,23 @@
+{% load static %}
+<div class="col-12 col-sm-8 col-md-6 col-lg-4">
+<div style="padding: 20px">
+      <div class="card">
+        <img class="card-img" src="{{p_pic}}" alt="Vans">
+        <div class="card-img-overlay d-flex justify-content-end">
+          <a href="#" class="card-link text-danger like">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title text-center">{{p_name}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted text-center">Product ID: {{p_id}}</h6>
+          <p class="card-text">
+           {{p_description}}             </p>
+           <div class="buy d-flex justify-content-between align-items-center">
+            <div class="price text-success"><h5 class="mt-4">Rs {{p_price}}</h5></div>
+             <a href="https://api.whatsapp.com/send?phone=918470994950&text='Hi! I am interested in buying your product: [{{p_name}}], priced at Rs. [{{p_price}}], described as: [{{p_description}}]. Please let me know more!'" class="btn btn-danger mt-3" style="padding: 10px; z-index: 10" ><i class="fas fa-shopping-cart"></i> Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>

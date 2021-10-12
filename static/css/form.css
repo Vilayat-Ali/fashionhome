@@ -1,0 +1,13 @@
+@media all and (min-width: 768px){
+    #form{
+        width: 80%;
+        margin-left: 10rem;
+    }
+}
+
+@media all and (max-width: 768px){
+    #form{
+        width: 60%;
+        margin-left: 5rem;
+    }
+}

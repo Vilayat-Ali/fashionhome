@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'utils/header.html' %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+</head>
+<body>
+
+
+    {% block main %}
+    <div class="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand">Admin Dashboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" style="cursor: pointer" >Add Product <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" style="cursor: pointer" >Remove Product <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" style="cursor: pointer" >Update Product <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        </div>
+        <div class="container-fluid">
+            <h1 class="text-center" style="padding: 2vw 2vw">Add Product</h1>
+        </div>
+    <form style="width: 60%; margin-left: auto; margin-right: auto; margin-top: 1vw" method="POST" action="/dashboard/save-products/">
+
+      {% csrf_token %}
+    
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form3Example1" class="form-control" name="name"/>
+          <label class="form-label" htmlFor="form3Example1">Product Name</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form3Example2" class="form-control" name="price"/>
+          <label class="form-label" htmlFor="form3Example2">Product Price in INR</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form3Example1" class="form-control" name="d_price"/>
+          <label class="form-label" htmlFor="form3Example1">Discount in %</label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-outline mb-4">
+      <textarea id="form3Example3" class="form-control" name="description"></textarea>
+      <label class="form-label" htmlFor="form3Example3">Product Description</label>
+    </div>
+    
+    
+    <div class="file" style="width: 50%; margin: 2vw 2vw">
+                    <label class="form-label" htmlFor="customFile">Upload Product Image Here</label>
+                    <input type="file" class="form-control" id="customFile" name="pic"/>
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary btn-block mb-4" style="width: 40%; margin-left: auto; margin-right: auto" onClick={this.addProductToSite.bind(thi>Add Product</button>
+    
+    </form>
+    {% endblock%}
+    {% include 'utils/footer.html' %}
+</body>
+</html>

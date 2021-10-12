@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'utils/header.html' %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+</head>
+<body>
+    {% block  navbar %}
+    {% include './navbar.html' %}
+    {% endblock %}
+
+    {% block main %}
+    <header class="masthead">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="masthead-device-mockup">
+                    <img id="img-girl" class="mx-auto" src="{% static '/img/girl.png' %}" alt="girl"/>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                        <h1 class="display-1 lh-1 mb-3">Your Fashion<br/> Your Rules.</h1>
+                        <p class="lead fw-normal text-muted mb-5">Fashion home brings the best for your fashion needs at your doorstep.<br/> Fashion home presents thousands of styles in under one click.</p>
+                        <div class="d-flex flex-column flex-lg-row align-items-center">
+                        <a class="btn btn-primary btn-lg active" id="btn-cta" role="button" aria-pressed="true">Go shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="text-center bg-gradient-primary-to-secondary">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xl-8">
+                    <div class="h2 fs-1 text-white mb-4 font-weight-bold">"Your personalised fashion expert!"<br/>-  Fashion home.</div>
+                    <img src="{% static 'img/ecom.jpeg' %}" id="ecom" alt="..."/>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <section id="features">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                    <div class="container-fluid px-5">
+                        <div class="row gx-5">
+                            <div class="col-md-6 mb-5">
+
+                                <div class="text-center">
+                                    <h3 class="font-alt">Latest Fashion</h3>
+                                    <i class="fas fa-tshirt" id="fontawesome"></i>
+                                    <p class="text-muted mb-0">Cruise over 100+ fashionable clothings across all ranges!</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-5">
+
+                                <div class="text-center">
+                                    <h3 class="font-alt">Regularly updated range</h3>
+                                    <i class="fab fa-angellist" id="fontawesome"></i>
+                                    <p class="text-muted mb-0">Experience new fashion everyday with outhand-picked products</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-5 mb-md-0">
+                                <div class="text-center">
+                                    <h3 class="font-alt">Easy to place order</h3>
+                                    <i class="fas fa-shopping-cart" id="fontawesome"></i>
+                                    <p class="text-muted mb-0">Our easy-to-naviagte interface makes sure you easily place order.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-center">
+                                    <h3 class="font-alt">Cash on delivery</h3>
+                                    <i class="far fa-money-bill-alt" id="fontawesome"></i>
+                                    <p class="text-muted mb-0">Do hazzle-free shopping by cash on delivery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 order-lg-0">
+
+                    <div class="features-device-mockup">
+                        <img src="{% static 'img/dress.png' %}" alt="" class="img" id="dress"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light mx-auto" id="bannerBoy" style="margin:0!important">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                <div class="col-12 col-lg-5">
+                    <h2 class="display-4 lh-1 mb-4">Enter a new age of style</h2>
+                    <p class="lead fw-normal text-muted mb-5 mb-lg-0">Fashion Home brings you a wide range of latest and most stylish trends of fashion out hand-picked, specially for you. Fashion Home presents the latest collection of ravishing and elegant outfits for you at an amazing price range. Be your own fashionista!</p>
+                </div>
+                <div class="col-sm-8 col-md-6">
+                    <div class="px-5 px-sm-0"><img class="img-fluid mx-auto" src="{% static 'img/bboy.png' %}" alt="..." /></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta" style="background-image: url('{% static './img/box.jpeg' %}')">
+        <div class="cta-content">
+            <div class="container px-5">
+                <h2 class="text-white display-1 lh-1 mb-4">
+                    Stop waiting.
+                    <br />
+                    Start grooming.
+                </h2>
+                <a class="btn btn-outline-light py-3 px-4 rounded-pill" target="_blank">Shop</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gradient-primary-to-secondary" id="download">
+        <div class="container px-5">
+            <h2 class="text-center text-secondary font-alt mb-4">Want to know us more!</h2>
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                <a class="btn btn-success btn-lg active" id="btn-know-us" role="button" aria-pressed="true">Know us</a>
+            </div>
+        </div>
+    </section>
+    {% endblock%}
+    {% include 'utils/footer.html' %}
+</body>
+</html>

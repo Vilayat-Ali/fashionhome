@@ -1,0 +1,13 @@
+@media all and (max-width: 768px){
+    #search{
+        width: 90%;
+        padding: 10px 40px;
+    }
+}
+
+@media all and (min-width:768px){
+    #search{
+        width: 40%;
+        padding: 10px 30px;
+    }
+}
