@@ -149,4 +149,4 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'default from email'
 
 # Heroku configurations for CI/CD
-django_heroku.settings(locals())
+django_heroku.settings(locals(), staticfiles=False)
