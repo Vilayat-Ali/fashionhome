@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
     {% for product in products%}
-        {% include 'utils/product-card.html' with p_name=product.product_name  p_price=product.product_price p_description=product.product_description p_pic=product.product_pic.url p_id=product.id%}
+        {% include 'utils/product-card.html' with p_name=product.product_name  p_price=product.product_price p_description=product.product_description p_pic=product.product_pic.url p_id=product.id original_p=product.before_discount_price%}
     {% endfor%}
 </div>
 </div>
